@@ -38,17 +38,11 @@ class ListNode {
             return true;
         if (!(obj instanceof ListNode))
             return false;
-        ListNode p = this, q = (ListNode)obj;
-        while (p != null && q != null){
-            if (p.val != q.val)
-                return false;
-            p = p.next;
-            q = q.next;
-        }
-        if ((q == null && p != null) || (q != null && p == null))
-            return false;
+        ListNode other = (ListNode) obj;
+        if (this.next != null)
+            return this.val == other.val && this.next.equals(other.next);
         else
-            return true;
+            return this.val == other.val && other.next == null;
     }
 
     @Override
