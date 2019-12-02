@@ -11,11 +11,8 @@ public class SolutionTest {
         String s1 = "abcabcbb";
         String s2 = "bbbbb";
         String s3 = "pwwkew";
-        int r1 = Solution.lengthOfLongestSubstring(s1);
-        int r2 = Solution.lengthOfLongestSubstring(s2);
-        int r3 = Solution.lengthOfLongestSubstring(s3);
-        assertEquals(3, r1);
-        assertEquals(1, r2);
-        assertEquals(3, r3);
+        assertEquals(3, Solution.lengthOfLongestSubstring(s1));
+        assertEquals(1, Solution.lengthOfLongestSubstring(s2));
+        assertEquals(3, Solution.lengthOfLongestSubstring(s3));
     }
 }
