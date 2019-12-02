@@ -1,7 +1,7 @@
 package leetcode_2;
 
 // leetcode高赞答案
-class Solution_Answer {
+class SolutionAnswer {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode root = new ListNode(0);//头结点是一个val=0的结点
         ListNode cursor = root;
