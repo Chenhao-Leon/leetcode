@@ -6,7 +6,7 @@ package leetcode_5;
  * @Date: 2019/12/3
  * @Description: 最长回文子串
  */
-// 使用StringBuilder或者StringBuffer的reverse方法判断回文串会超时，超时。。。
+// 使用StringBuilder或者StringBuffer的reverse方法判断回文串会超时
 // 使用如下isHuiWen方法可以通过，但是用时只击败9.9%
 public class Solution {
     public String longestPalindrome(String s){
