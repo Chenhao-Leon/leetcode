@@ -17,6 +17,13 @@ public class SolutionAnswer1 {
         for(int i = len - 1; i >= 0; i--)
             for(int j = i; j < len; j++){
                 arr[i][j] = s.charAt(i) == s.charAt(j) && (j - i < 2 || arr[i + 1][j - 1]);
+                // 与下面等价
+//                if(i == j)
+//                    arr[i][j] = true;
+//                else if(j - i == 1)
+//                    arr[i][j] = s.charAt(i) == s.charAt(j);
+//                else
+//                    arr[i][j] = s.charAt(i) == s.charAt(j) && arr[i + 1][j - 1] == true;
                 if(j - i + 1 > sub.length() && arr[i][j])
                     sub = s.substring(i, j + 1);
             }
