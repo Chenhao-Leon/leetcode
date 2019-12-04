@@ -17,5 +17,6 @@ public class SolutionAnswerTest {
         assertEquals(1, SolutionAnswer.lengthOfLongestSubstring(s2));
         assertEquals(3, SolutionAnswer.lengthOfLongestSubstring(s3));
         assertEquals(2, SolutionAnswer.lengthOfLongestSubstring(s4));
+
     }
 }

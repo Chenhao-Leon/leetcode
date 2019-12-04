@@ -18,6 +18,5 @@ public class SolutionAnswerTest {
         r.printList();
         //注意数组作为参数传入时创建的写法
         Assert.assertEquals(r, ListNode.array2Node(new int[]{7, 0, 8}));
-
     }
 }
