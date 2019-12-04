@@ -7,6 +7,7 @@ import com.sun.deploy.security.SelectableSecurityManager;
  * @Date: 2019/12/4
  * @Description: Z 字形变换
  */
+// 先用char操作然后转为String（String.copyValueOf)时间可大幅降低
 public class Solution {
     public String convert(String s, int numRows){
         String result = "";
