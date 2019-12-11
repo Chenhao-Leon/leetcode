@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Auther: Chen Hao
  * @Date: 2019/12/11
- * @Description: 括号生成
+ * @Description: 括号生成（回溯）
  */
 public class SolutionAnswer {
     public List<String> generateParenthesis(int n) {
