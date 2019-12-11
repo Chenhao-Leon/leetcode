@@ -19,7 +19,7 @@ public class SolutionAnswer {
         for(int i =0; i<digits.length();i++){
             // Character.getNumericValue可以把整数字符转为整数
             int x = Character.getNumericValue(digits.charAt(i));
-            // peek方法获得对头元素
+            // peek方法（或getFirst）获得队头元素
             while(ans.peek().length()==i){
                 String t = ans.remove();
                 // toCharArray方法将String转成char数组
