@@ -11,7 +11,6 @@ import java.util.List;
  */
 public class Solution51 {
     private List<List<String>> res = new ArrayList<>();
-    private List<String> ans = new ArrayList<>();
     private char[][] chess;
     private int n;
     public List<List<String>> solveNQueens(int n){
@@ -30,13 +29,12 @@ public class Solution51 {
             if(!flag[num][i]){
                 chess[num][i] = 'Q';
                 if(num == n - 1){
+                    List<String> ans = new ArrayList<>();
                     for(int j = 0; j < n; j++){
                         String str = String.valueOf(chess[j]);
                         ans.add(str);
                     }
-                    //需要新创建一个和ans相同的对象加入res，否则后边clear后res中就变空了
-                    res.add(new ArrayList<>(ans));
-                    ans.clear();
+                    res.add(ans);
                     chess[num][i] = '.';
                     return;
                 }
