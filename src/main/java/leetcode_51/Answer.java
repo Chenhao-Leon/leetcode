@@ -9,7 +9,7 @@ import java.util.List;
  * @Description: N皇后
  * 时间内存均100%
  */
-class Solution {
+class Answer {
     private int rows[];
     // "hill" diagonals
     private int hills[];
