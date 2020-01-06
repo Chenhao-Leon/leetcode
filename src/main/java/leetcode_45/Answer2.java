@@ -8,7 +8,7 @@ package leetcode_45;
 public class Answer2 {
     public int jump(int[] nums) {
         int end = 0;
-        //maxPosition是当i<=index<=end是的最远位置
+        //maxPosition是在i<=index<=end范围内再跳一步可以达到的最远位置
         int maxPosition = 0;
         int steps = 0;
         for(int i = 0; i < nums.length - 1; i++){
