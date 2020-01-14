@@ -5,7 +5,7 @@ package leetcode_62;
  * @Date: 2020/1/14
  * @Description: 不同路径（超时）
  */
-class Solution {
+class Solution62 {
     private int m;
     private int n;
     private int count = 0;
