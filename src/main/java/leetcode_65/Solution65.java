@@ -3,7 +3,7 @@ package leetcode_65;
 /**
  * @Auther: Chen Hao
  * @Date: 2020/1/15
- * @Description: 有效数字 defeat 22%（作弊）
+ * @Description: 有效数字 defeat 22%（作弊，直接使用API）
  */
 public class Solution65 {
     public boolean isNumber(String s){
