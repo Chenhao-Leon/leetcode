@@ -24,6 +24,7 @@ class Answer {
 
     public boolean isNumber(String s) {
         int state = 0;
+        //二进制整型
         int finals = 0b101101000;
         int[][] transfer = new int[][]{{ 0, 1, 6, 2,-1},
                 {-1,-1, 6, 2,-1},
