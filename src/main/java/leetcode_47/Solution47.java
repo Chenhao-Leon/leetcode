@@ -36,7 +36,6 @@ class Solution47 {
         List<List<Integer>> output = new LinkedList();
 
         ArrayList<Integer> nums_lst = new ArrayList<Integer>();
-        Arrays.sort(nums);
         for (int num : nums)
             nums_lst.add(num);
 
