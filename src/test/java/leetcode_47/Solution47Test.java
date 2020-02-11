@@ -10,7 +10,7 @@ public class Solution47Test {
 
     @Test
     public void permuteUnique() {
-        List<List<Integer>> res = new Solution47().permuteUnique(new int[]{2,2,1,1});
+        List<List<Integer>> res = new Solution47().permuteUnique(new int[]{3,3,0,3});
         for(List<Integer> list : res)
             System.out.println(list);
     }

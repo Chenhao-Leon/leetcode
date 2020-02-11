@@ -1,39 +1,47 @@
 package leetcode_47;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Auther: Chen Hao
  * @Date: 2020/1/2
- * @Description: 全排列 II
- * 29、30两个用例没有通过
+ * @Description: 全排列 II（顺着全排列Ⅰ的思路，进行剪枝）
  */
-public class Solution47 {
-    private List<Integer> list = new ArrayList<>();
-    private List<List<Integer>> res = new ArrayList<>();
-    public List<List<Integer>> permuteUnique(int[] nums) {
-        Arrays.sort(nums);
-        for(int a : nums)
-            list.add(a);
-        backTrack(0, nums.length - 1);
-        return res;
+class Solution47 {
+    private void backtrack(int n,
+                          ArrayList<Integer> nums,
+                          List<List<Integer>> output,
+                          int first) {
+        if (first == n)
+            output.add(new ArrayList<Integer>(nums));
+        for (int i = first; i < n; i++) {
+            // 剪枝，即在first的位置上，待交换数字nums[i]是在之前没有交换过
+            if(isSwap(first, i, nums)) {
+                Collections.swap(nums, first, i);
+                backtrack(n, nums, output, first + 1);
+                Collections.swap(nums, first, i);
+            }
+        }
     }
 
-    private void backTrack(int start, int end){
-        if(start == end){
-            res.add(new ArrayList<>(list));
-            return;
+    private boolean isSwap(int s, int index, ArrayList<Integer> nums){
+        for(int i = s; i < index; i++){
+            if(nums.get(i).intValue() == nums.get(index).intValue())
+                return false;
         }
-        for(int i = start; i < list.size(); i++){
-            // 剪枝
-            if(i != start && (list.get(i - 1).equals(list.get(i)) || list.get(start).equals(list.get(i))))
-                continue;
-            Collections.swap(list, i, start);
-            backTrack(start + 1, end);
-            Collections.swap(list, i, start);
-        }
+        return true;
+    }
+
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        List<List<Integer>> output = new LinkedList();
+
+        ArrayList<Integer> nums_lst = new ArrayList<Integer>();
+        Arrays.sort(nums);
+        for (int num : nums)
+            nums_lst.add(num);
+
+        int n = nums.length;
+        backtrack(n, nums_lst, output, 0);
+        return output;
     }
 }
