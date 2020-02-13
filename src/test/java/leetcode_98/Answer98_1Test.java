@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Solution98Test {
+public class Answer98_1Test {
 
     @Test
     public void isValidBST() {
@@ -13,9 +13,6 @@ public class Solution98Test {
         root.right = new TreeNode(15);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(20);
-        assertFalse(new Solution98().isValidBST(root));
-        TreeNode root1 = new TreeNode(1);
-        root1.left = new TreeNode(1);
-        assertFalse(new Solution98().isValidBST(root1));
+        assertFalse(new Answer98_1().isValidBST(root));
     }
 }

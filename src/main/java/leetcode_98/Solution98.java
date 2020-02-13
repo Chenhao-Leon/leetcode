@@ -8,6 +8,7 @@ import java.util.Stack;
  * @Auther: Chen Hao
  * @Date: 2020/2/13
  * @Description: 验证二叉搜索树 (时间6%)
+ * 总结：将stack设为long类型且将MAX_VALUE压入栈底这个方法，可以用空栈代替，就不涉及Long的问题了
  */
 public class Solution98 {
     public boolean isValidBST(TreeNode root){
