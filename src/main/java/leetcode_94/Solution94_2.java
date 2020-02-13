@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * @Auther: Chen Hao
  * @Date: 2020/2/13
- * @Description: 二叉树的中序遍历
+ * @Description: 二叉树的中序遍历（迭代）
  */
 public class Solution94_2 {
     public List<Integer> inorderTraversal(TreeNode root){
