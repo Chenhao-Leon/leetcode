@@ -3,11 +3,12 @@ package leetcode_105;
 /**
  * @Auther: Chen Hao
  * @Date: 2020/2/15
- * @Description: 从前序与中序遍历序列构造二叉树
+ * @Description: 从前序与中序遍历序列构造二叉树（时间46%）
  */
 public class Solution105 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         TreeNode root = null;
+        //这里需要在递归前创造对象，否则root恒为空。在Answer105中改为返回TreeNode
         if(inorder.length != 0)
             root = new TreeNode(0);
         scanArray(root, preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
