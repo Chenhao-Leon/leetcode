@@ -8,6 +8,7 @@ import java.util.List;
  * @Auther: Chen Hao
  * @Date: 2020/2/16
  * @Description: 填充每个节点的下一个右侧节点指针（时间 8%）
+ * next为空的结点不任何操作即为null（无需再将null赋给next）
  */
 public class Solution116 {
     public Node connect(Node root) {
