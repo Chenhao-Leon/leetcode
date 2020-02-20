@@ -1,3 +1,5 @@
+package leetcode_122;
+
 import leetcode_122.Solution122;
 import org.junit.Test;
 
