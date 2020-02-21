@@ -3,7 +3,7 @@ package leetcode_136;
 /**
  * @Auther: Chen Hao
  * @Date: 2020/2/21
- * @Description: 只出现一次的数字
+ * @Description: 只出现一次的数字 异或
  */
 public class Answer136 {
     public int singleNumber(int[] nums) {

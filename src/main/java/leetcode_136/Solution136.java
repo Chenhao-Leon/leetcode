@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @Auther: Chen Hao
  * @Date: 2020/2/21
- * @Description: 只出现一次的数字
+ * @Description: 只出现一次的数字 时间O(n) 空间O(n)
  */
 public class Solution136 {
     public int singleNumber(int[] nums) {
