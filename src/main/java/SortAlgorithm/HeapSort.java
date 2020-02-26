@@ -17,7 +17,7 @@ public class HeapSort {
     }
     private void adjustHeap(int[] nums, int s, int e){
         int i = s;
-        while(2 * i + 1 < e){
+        while(2 * i + 1 <= e){
             int min;
             if(2 * i + 2 <= e)
                 min = nums[2 * i + 1] < nums[2 * i + 2]? 2 * i + 2: 2 * i + 1;
