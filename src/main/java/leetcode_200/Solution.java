@@ -8,6 +8,9 @@ import java.util.LinkedList;
  * @Auther: Chen Hao
  * @Date: 2020/2/29
  * @Description: 岛屿数量 BFS 时间38%
+ * 改进：
+ * 1、访问过将grid设为'0'，即为visited，无需另外空间
+ * 2、队列的类型可以用Integer，将i * column + j作为键值
  */
 public class Solution {
     class Node{
