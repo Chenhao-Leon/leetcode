@@ -20,12 +20,14 @@ public class Solution33 {
             else {
                 //nums[mid]处于前半段
                 if(nums[mid] >= nums[left]) {
+                    //target在mid左侧的情况
                     if(target >= nums[left] && target < nums[mid])
                         right = mid - 1;
                     else left = mid + 1;
                 }
                 //nums[mid]处于后半段
                 else {
+                    //target在mid右侧的情况
                     if(target <= nums[right] && target > nums[mid])
                         left = mid + 1;
                     else right = mid - 1;
