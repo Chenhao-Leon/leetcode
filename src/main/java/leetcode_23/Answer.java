@@ -5,7 +5,7 @@ package leetcode_23;
  * @Date: 2019/12/11
  * @Description: 合并K个排序链表(分治法)
  */
-public class SolutionAnswer {
+public class Answer {
     public ListNode mergeKLists(ListNode[] lists) {
         int len = lists.length;
         if (len == 0) {
@@ -21,25 +21,21 @@ public class SolutionAnswer {
         return lists[0];
     }
 
-    // 合并两个链表
+    // 合并两个有序链表
     private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(-1);
-        ListNode p = head;
-        while(l1 != null && l2 != null) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode tail = dummyHead;
+        while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
-                p.next = l1;
+                tail.next = l1;
                 l1 = l1.next;
             } else {
-                p.next = l2;
+                tail.next = l2;
                 l2 = l2.next;
             }
-            p = p.next;
+            tail = tail.next;
         }
-        if (l1 != null) {
-            p.next = l1;
-        } else if (l2 != null) {
-            p.next = l2;
-        }
-        return head.next;
+        tail.next = l1 == null? l2: l1;
+        return dummyHead.next;
     }
 }
