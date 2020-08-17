@@ -1,4 +1,4 @@
-package SortAlgorithm;
+package others;
 
 /**
  * @Auther: Chen Hao
