@@ -1,8 +1,6 @@
-package offer_59;
+package offer59;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MaxQueueTest {
     @Test

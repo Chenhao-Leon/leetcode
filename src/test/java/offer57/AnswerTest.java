@@ -1,8 +1,6 @@
-package offer_57;
+package offer57;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class AnswerTest {
 

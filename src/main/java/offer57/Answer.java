@@ -1,4 +1,4 @@
-package offer_57;
+package offer57;
 
 import java.util.ArrayList;
 
