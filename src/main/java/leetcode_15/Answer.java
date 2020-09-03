@@ -9,14 +9,14 @@ import java.util.List;
  * @Date: 2019/12/9
  * @Description: 三数之和(双指针)
  */
-public class SolutionAnswer {
+public class Answer {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> re = new ArrayList<>();
         // 数组排序
         Arrays.sort(nums);
         for(int i = 0; i < nums.length; i++){
-            if(i != 0 && nums[i] == nums[i - 1])
-                continue;
+            // 去重
+            if(i != 0 && nums[i] == nums[i - 1]) continue;
             int j = i + 1;
             int k = nums.length - 1;
             while(j < k){
@@ -25,9 +25,10 @@ public class SolutionAnswer {
                 if(sum > 0) k--;
                 else if(sum < 0) j++;
                 else{
-                    // 一行代码创建ArrayList
                     re.add(Arrays.asList(nums[i], nums[j], nums[k]));
+                    // 去重
                     while(j < k && nums[j] == nums[j + 1]) j++;
+                    // 去重
                     while(j < k && nums[k] == nums[k - 1]) k--;
                     j++;
                     k--;
