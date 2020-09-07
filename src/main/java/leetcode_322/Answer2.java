@@ -13,6 +13,7 @@ public class Answer2 {
         int max = amount + 1;
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, max);
+        //这里将0置为0省去了很多操作
         dp[0] = 0;
         for (int i = 1; i <= amount; i++) {
             for (int j = 0; j < coins.length; j++) {
